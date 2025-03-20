@@ -32,6 +32,9 @@ const Navbar = () => {
     { name: 'Vantagens', href: '#features' },
     { name: 'Cobertura', href: '#coverage' },
     { name: 'Contato', href: '#contact' },
+    { name: 'Empresarial', href: '/empresarial' },
+    { name: 'Condomínios', href: '/condominios' },
+    { name: 'Provedores', href: '/provedores' },
     { name: 'Contratar', href: '/contratar' }
   ];
 
