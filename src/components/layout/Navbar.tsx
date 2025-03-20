@@ -1,8 +1,24 @@
 
 import React, { useState, useEffect } from 'react';
 import { Button } from '../ui/button';
-import { Menu, X, PhoneCall } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -28,14 +44,32 @@ const Navbar = () => {
   };
 
   const navLinks = [
-    { name: 'Planos', href: '#services' },
-    { name: 'Vantagens', href: '#features' },
-    { name: 'Cobertura', href: '#coverage' },
-    { name: 'Contato', href: '#contact' },
     { name: 'Empresarial', href: '/empresarial' },
     { name: 'Condomínios', href: '/condominios' },
-    { name: 'Provedores', href: '/provedores' },
-    { name: 'Contratar', href: '/contratar' }
+    { name: 'Provedores', href: '/provedores' }
+  ];
+
+  const internetTypes = [
+    { 
+      title: 'Residencial', 
+      description: 'Internet fibra ótica de alta velocidade para sua casa',
+      href: '/contratar'
+    },
+    { 
+      title: 'Empresarial', 
+      description: 'Soluções de conectividade para empresas de todos os portes',
+      href: '/empresarial' 
+    },
+    { 
+      title: 'Condomínios', 
+      description: 'Internet para condomínios residenciais e comerciais',
+      href: '/condominios' 
+    },
+    { 
+      title: 'Provedores', 
+      description: 'Soluções para outros provedores de internet',
+      href: '/provedores' 
+    }
   ];
 
   return (
@@ -67,14 +101,35 @@ const Navbar = () => {
               )
             ))}
             
-            <Button 
-              variant="default"
-              size="sm"
-              className="gap-2"
-            >
-              <PhoneCall size={16} />
-              Ligue agora
-            </Button>
+            <Dialog>
+              <DialogTrigger asChild>
+                <Button variant="default" size="sm">
+                  Contratar
+                </Button>
+              </DialogTrigger>
+              <DialogContent className="sm:max-w-md">
+                <DialogHeader>
+                  <DialogTitle>Escolha o tipo de internet</DialogTitle>
+                  <DialogDescription>
+                    Selecione o tipo de internet que melhor atende às suas necessidades
+                  </DialogDescription>
+                </DialogHeader>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-4">
+                  {internetTypes.map((type) => (
+                    <Card key={type.title} className="cursor-pointer hover:border-primary transition-all">
+                      <Link to={type.href}>
+                        <CardHeader className="pb-2">
+                          <CardTitle className="text-lg">{type.title}</CardTitle>
+                        </CardHeader>
+                        <CardContent>
+                          <CardDescription>{type.description}</CardDescription>
+                        </CardContent>
+                      </Link>
+                    </Card>
+                  ))}
+                </div>
+              </DialogContent>
+            </Dialog>
           </div>
           
           <div className="flex md:hidden items-center">
@@ -117,13 +172,38 @@ const Navbar = () => {
                 </Link>
               )
             ))}
-            <Button 
-              variant="default"
-              className="w-full mt-4 gap-2"
-            >
-              <PhoneCall size={16} />
-              Ligue agora
-            </Button>
+            <Dialog>
+              <DialogTrigger asChild>
+                <Button 
+                  variant="default"
+                  className="w-full mt-4"
+                >
+                  Contratar
+                </Button>
+              </DialogTrigger>
+              <DialogContent className="sm:max-w-md">
+                <DialogHeader>
+                  <DialogTitle>Escolha o tipo de internet</DialogTitle>
+                  <DialogDescription>
+                    Selecione o tipo de internet que melhor atende às suas necessidades
+                  </DialogDescription>
+                </DialogHeader>
+                <div className="grid grid-cols-1 gap-4 py-4">
+                  {internetTypes.map((type) => (
+                    <Card key={type.title} className="cursor-pointer hover:border-primary transition-all">
+                      <Link to={type.href} onClick={() => setIsMenuOpen(false)}>
+                        <CardHeader className="pb-2">
+                          <CardTitle className="text-lg">{type.title}</CardTitle>
+                        </CardHeader>
+                        <CardContent>
+                          <CardDescription>{type.description}</CardDescription>
+                        </CardContent>
+                      </Link>
+                    </Card>
+                  ))}
+                </div>
+              </DialogContent>
+            </Dialog>
           </div>
         </div>
       )}
