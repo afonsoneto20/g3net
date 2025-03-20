@@ -1,6 +1,6 @@
 
 import React from 'react';
-import Button from '../ui/Button';
+import { Button } from '../ui/button';
 import { ArrowRight, Wifi, Zap, CheckCircle } from 'lucide-react';
 
 const Hero = () => {
@@ -24,10 +24,10 @@ const Hero = () => {
             <div className="flex flex-wrap gap-4 mb-10">
               <Button 
                 size="lg" 
-                icon={<ArrowRight />}
-                className="btn-hover"
+                className="btn-hover gap-2"
               >
                 Ver planos
+                <ArrowRight />
               </Button>
               <Button 
                 variant="outline" 

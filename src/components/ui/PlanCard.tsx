@@ -1,7 +1,7 @@
 
 import React from 'react';
+import { Button } from './button';
 import { cn } from '@/lib/utils';
-import Button from './Button';
 import { ArrowRight } from 'lucide-react';
 
 interface PlanCardProps {
@@ -61,11 +61,11 @@ const PlanCard = ({
       </ul>
       
       <Button 
-        variant={popular ? "primary" : "outline"}
-        fullWidth
-        icon={<ArrowRight size={18} />}
+        variant={popular ? "default" : "outline"}
+        className="w-full gap-2"
       >
         Contratar agora
+        <ArrowRight size={18} />
       </Button>
     </div>
   );

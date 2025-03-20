@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import Button from '../ui/Button';
+import { Button } from '../ui/button';
 import { MapPin, Search, Check, X } from 'lucide-react';
 
 const Coverage = () => {
@@ -44,9 +44,9 @@ const Coverage = () => {
                 </div>
                 <Button 
                   type="submit" 
-                  className="bg-white text-primary-600 hover:bg-white/90"
-                  icon={<Search size={18} />}
+                  className="bg-white text-primary-600 hover:bg-white/90 gap-2"
                 >
+                  <Search size={18} />
                   Verificar
                 </Button>
               </div>

@@ -1,7 +1,7 @@
 
 import React from 'react';
+import { Button } from '../ui/button';
 import { Phone, Mail, MapPin, Facebook, Instagram, Twitter } from 'lucide-react';
-import Button from '../ui/Button';
 
 const Contact = () => {
   return (
@@ -86,7 +86,7 @@ const Contact = () => {
                 ></textarea>
               </div>
               
-              <Button type="submit" fullWidth className="btn-hover">
+              <Button type="submit" className="w-full btn-hover">
                 Enviar mensagem
               </Button>
             </form>

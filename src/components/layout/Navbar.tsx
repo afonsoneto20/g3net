@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import Button from '../ui/Button';
+import { Button } from '../ui/button';
 import { Menu, X, PhoneCall } from 'lucide-react';
 
 const Navbar = () => {
@@ -53,10 +53,11 @@ const Navbar = () => {
             ))}
             
             <Button 
-              variant="primary"
+              variant="default"
               size="sm"
-              icon={<PhoneCall size={16} />}
+              className="gap-2"
             >
+              <PhoneCall size={16} />
               Ligue agora
             </Button>
           </div>
@@ -91,11 +92,10 @@ const Navbar = () => {
               </a>
             ))}
             <Button 
-              variant="primary"
-              fullWidth
-              className="mt-4"
-              icon={<PhoneCall size={16} />}
+              variant="default"
+              className="w-full mt-4 gap-2"
             >
+              <PhoneCall size={16} />
               Ligue agora
             </Button>
           </div>
