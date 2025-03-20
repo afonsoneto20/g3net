@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '../ui/button';
 import { ArrowRight, Wifi, Zap, CheckCircle } from 'lucide-react';
@@ -39,10 +38,6 @@ const Hero = () => {
             </div>
             
             <div className="flex flex-wrap gap-6 text-gray-700">
-              <div className="flex items-center">
-                <CheckCircle size={20} className="text-primary-500 mr-2" />
-                <span>Sem fidelidade</span>
-              </div>
               <div className="flex items-center">
                 <CheckCircle size={20} className="text-primary-500 mr-2" />
                 <span>Instalação rápida</span>

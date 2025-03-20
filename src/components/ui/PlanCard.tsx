@@ -3,6 +3,7 @@ import React from 'react';
 import { Button } from './button';
 import { cn } from '@/lib/utils';
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface PlanCardProps {
   title: string;
@@ -63,9 +64,12 @@ const PlanCard = ({
       <Button 
         variant={popular ? "default" : "outline"}
         className="w-full gap-2"
+        asChild
       >
-        Contratar agora
-        <ArrowRight size={18} />
+        <Link to={`/contratar/${encodeURIComponent(title)}`}>
+          Contratar agora
+          <ArrowRight size={18} />
+        </Link>
       </Button>
     </div>
   );
