@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
@@ -155,7 +156,7 @@ const Condominios = () => {
             ))}
           </div>
           
-          <div className="mt-16 text-center">
+          <div className="mt-4 text-center">
             <Dialog>
               <DialogTrigger asChild>
                 <Button size="lg" className="gap-2">
@@ -194,6 +195,13 @@ const Condominios = () => {
                 </div>
               </DialogContent>
             </Dialog>
+          </div>
+          
+          <div className="mt-12 text-center">
+            <Button size="lg" className="gap-2">
+              Solicitar visita técnica
+              <CheckIcon size={18} />
+            </Button>
           </div>
         </div>
       </section>
@@ -266,13 +274,15 @@ const Condominios = () => {
                     <p className="text-sm text-gray-500 mb-4">
                       Pontos adicionais disponíveis por R$ 50,00/mês cada.
                     </p>
-                    <Button 
-                      variant={index === 1 ? "default" : "outline"}
-                      className="w-full gap-2"
-                    >
-                      Solicitar orçamento
-                      <CheckIcon size={18} />
-                    </Button>
+                    <Link to="/contratar">
+                      <Button 
+                        variant={index === 1 ? "default" : "outline"}
+                        className="w-full gap-2"
+                      >
+                        Contratar para meu condomínio
+                        <CheckIcon size={18} />
+                      </Button>
+                    </Link>
                   </div>
                 </CardContent>
               </Card>
@@ -280,6 +290,9 @@ const Condominios = () => {
           </div>
           
           <div className="mt-12 text-center">
+            <p className="text-lg text-gray-700 mb-4">
+              Deseja um orçamento personalizado ou velocidades maiores?
+            </p>
             <Button size="lg" variant="outline" className="gap-2">
               Solicitar orçamento personalizado
               <CheckIcon size={18} />

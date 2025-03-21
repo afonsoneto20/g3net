@@ -5,6 +5,7 @@ import Footer from '../components/layout/Footer';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { CheckIcon, BuildingIcon, Globe, Server, ShieldCheck, Wifi, Zap, Network, Route, User } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Empresarial = () => {
   return (
@@ -169,13 +170,15 @@ const Empresarial = () => {
                     ))}
                   </ul>
                   
-                  <Button 
-                    variant={index === 1 ? "default" : "outline"}
-                    className="w-full gap-2 mt-auto"
-                  >
-                    Solicitar orçamento
-                    <CheckIcon size={18} />
-                  </Button>
+                  <Link to="/contratar">
+                    <Button 
+                      variant={index === 1 ? "default" : "outline"}
+                      className="w-full gap-2 mt-auto"
+                    >
+                      Contratar para minha empresa
+                      <CheckIcon size={18} />
+                    </Button>
+                  </Link>
                 </CardContent>
               </Card>
             ))}
@@ -196,10 +199,7 @@ const Empresarial = () => {
           <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-8 md:p-12 shadow-lg">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               <div className="animate-fade-up">
-                <h3 className="text-2xl font-bold mb-4">Solicite seu Link Dedicado</h3>
-                <p className="text-lg text-gray-700 mb-6">
-                  Entre em contato com nosso gerente de contas G3 ELITE para um orçamento personalizado para sua empresa.
-                </p>
+                <h3 className="text-2xl font-bold mb-4">Solicite seu orçamento</h3>
                 
                 <div className="bg-white rounded-lg p-6 shadow-md">
                   <form className="space-y-4">
@@ -224,11 +224,44 @@ const Empresarial = () => {
                     </div>
                     
                     <div>
+                      <label className="block text-gray-700 mb-2">CEP</label>
+                      <input type="text" className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500" />
+                    </div>
+                    
+                    <div>
+                      <label className="block text-gray-700 mb-2">Endereço</label>
+                      <input type="text" className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500" />
+                    </div>
+                    
+                    <div className="grid grid-cols-2 gap-4">
+                      <div>
+                        <label className="block text-gray-700 mb-2">Número</label>
+                        <input type="text" className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500" />
+                      </div>
+                      
+                      <div>
+                        <label className="block text-gray-700 mb-2">Complemento</label>
+                        <input type="text" className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500" />
+                      </div>
+                    </div>
+                    
+                    <div className="grid grid-cols-2 gap-4">
+                      <div>
+                        <label className="block text-gray-700 mb-2">Bairro</label>
+                        <input type="text" className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500" />
+                      </div>
+                      
+                      <div>
+                        <label className="block text-gray-700 mb-2">Cidade/UF</label>
+                        <input type="text" className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500" />
+                      </div>
+                    </div>
+                    
+                    <div>
                       <label className="block text-gray-700 mb-2">Serviço de interesse</label>
                       <select className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500">
                         <option>Link Dedicado</option>
                         <option>Transporte L2 / VPN</option>
-                        <option>Anti-DDoS</option>
                         <option>Outro serviço</option>
                       </select>
                     </div>
@@ -272,7 +305,7 @@ const Empresarial = () => {
               </div>
               
               <div className="animate-fade-up">
-                <h3 className="text-2xl font-bold mb-4">Vantagens do Link Dedicado G3NET</h3>
+                <h3 className="text-2xl font-bold mb-4">Vantagens da G3NET</h3>
                 <ul className="space-y-4 mb-8">
                   {[
                     "Banda garantida e dedicada exclusivamente para sua empresa",

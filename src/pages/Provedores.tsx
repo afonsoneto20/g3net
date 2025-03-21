@@ -97,6 +97,13 @@ const Provedores = () => {
                 </CardHeader>
                 <CardContent>
                   <CardDescription className="text-base">{solution.description}</CardDescription>
+                  <div className="mt-4">
+                    <Link to="/contratar">
+                      <Button variant="outline" size="sm" className="w-full">
+                        Contratar
+                      </Button>
+                    </Link>
+                  </div>
                 </CardContent>
               </Card>
             ))}
@@ -177,14 +184,154 @@ const Provedores = () => {
               </Card>
             ))}
           </div>
+        </div>
+      </section>
+      
+      {/* Request Quote Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16 animate-fade-up">
+            <h2 className="text-3xl font-bold mb-4">Solicite um orçamento</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Preencha o formulário abaixo para receber uma proposta personalizada para o seu provedor
+            </p>
+          </div>
           
-          <div className="mt-16 text-center">
-            <Link to="/empresarial">
-              <Button size="lg" className="gap-2">
-                Solicitar proposta comercial
-                <CheckIcon size={18} />
-              </Button>
-            </Link>
+          <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-8 md:p-12 shadow-lg">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              <div className="animate-fade-up">
+                <div className="bg-white rounded-lg p-6 shadow-md">
+                  <form className="space-y-4">
+                    <div>
+                      <label className="block text-gray-700 mb-2">Nome do provedor</label>
+                      <input type="text" className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500" />
+                    </div>
+                    
+                    <div>
+                      <label className="block text-gray-700 mb-2">Nome do responsável</label>
+                      <input type="text" className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500" />
+                    </div>
+                    
+                    <div>
+                      <label className="block text-gray-700 mb-2">E-mail</label>
+                      <input type="email" className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500" />
+                    </div>
+                    
+                    <div>
+                      <label className="block text-gray-700 mb-2">Telefone</label>
+                      <input type="tel" className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500" />
+                    </div>
+                    
+                    <div>
+                      <label className="block text-gray-700 mb-2">CEP</label>
+                      <input type="text" className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500" />
+                    </div>
+                    
+                    <div>
+                      <label className="block text-gray-700 mb-2">Endereço</label>
+                      <input type="text" className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500" />
+                    </div>
+                    
+                    <div className="grid grid-cols-2 gap-4">
+                      <div>
+                        <label className="block text-gray-700 mb-2">Número</label>
+                        <input type="text" className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500" />
+                      </div>
+                      
+                      <div>
+                        <label className="block text-gray-700 mb-2">Complemento</label>
+                        <input type="text" className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500" />
+                      </div>
+                    </div>
+                    
+                    <div className="grid grid-cols-2 gap-4">
+                      <div>
+                        <label className="block text-gray-700 mb-2">Bairro</label>
+                        <input type="text" className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500" />
+                      </div>
+                      
+                      <div>
+                        <label className="block text-gray-700 mb-2">Cidade/UF</label>
+                        <input type="text" className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500" />
+                      </div>
+                    </div>
+                    
+                    <div>
+                      <label className="block text-gray-700 mb-2">Serviço de interesse</label>
+                      <select className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500">
+                        <option>Trânsito IP</option>
+                        <option>Transporte</option>
+                        <option>Última Milha</option>
+                        <option>Fibra Apagada</option>
+                        <option>Outro serviço</option>
+                      </select>
+                    </div>
+                    
+                    <div>
+                      <label className="block text-gray-700 mb-2">Capacidade necessária</label>
+                      <select className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500">
+                        <option>Até 1 Gbps</option>
+                        <option>1 Gbps - 10 Gbps</option>
+                        <option>10 Gbps - 40 Gbps</option>
+                        <option>40 Gbps - 100 Gbps</option>
+                        <option>Acima de 100 Gbps</option>
+                      </select>
+                    </div>
+                    
+                    <div>
+                      <label className="block text-gray-700 mb-2">Detalhes adicionais</label>
+                      <textarea className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500" rows={4}></textarea>
+                    </div>
+                    
+                    <Button 
+                      type="submit"
+                      className="w-full gap-2"
+                    >
+                      Solicitar orçamento
+                      <CheckIcon size={18} />
+                    </Button>
+                  </form>
+                </div>
+              </div>
+              
+              <div className="animate-fade-up">
+                <h3 className="text-2xl font-bold mb-4">Por que solicitar um orçamento?</h3>
+                <ul className="space-y-4 mb-8">
+                  {[
+                    "Preços especiais para provedores de internet",
+                    "Soluções personalizadas com base nas suas necessidades",
+                    "Atendimento prioritário por um consultor especializado",
+                    "Condições comerciais flexíveis e competitivas",
+                    "Suporte técnico dedicado para seu provedor",
+                    "Alta confiabilidade e desempenho de rede",
+                    "Parcerias de longo prazo com crescimento conjunto"
+                  ].map((item, index) => (
+                    <li key={index} className="flex items-start">
+                      <div className="bg-primary-500 rounded-full p-1 mr-3 mt-1 flex-shrink-0">
+                        <CheckIcon size={16} className="text-white" />
+                      </div>
+                      <span className="text-gray-700">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+                
+                <div className="bg-white/80 backdrop-blur-sm rounded-lg p-6 border border-primary-100">
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 rounded-full bg-primary-50 flex items-center justify-center text-primary-500 mr-4">
+                      <Network size={24} />
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-semibold">Somos um provedor de provedores</h4>
+                      <p className="text-gray-600">Especialistas em soluções wholesale</p>
+                    </div>
+                  </div>
+                  <p className="text-gray-700 mb-4">
+                    Nossa infraestrutura de rede foi projetada para atender às demandas específicas de provedores de internet, 
+                    oferecendo alta capacidade, baixa latência e disponibilidade superior.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -202,7 +349,7 @@ const Provedores = () => {
                 Agendar demonstração
                 <CheckIcon size={18} />
               </Button>
-              <Link to="/empresarial">
+              <Link to="/contratar">
                 <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-primary-500">
                   Solicitar orçamento
                 </Button>
