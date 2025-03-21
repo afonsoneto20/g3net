@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
@@ -6,7 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Link } from 'react-router-dom';
-import { BuildingIcon, CheckIcon, Home, Lightbulb, Wifi, Users, ShieldCheck, LayoutPlan } from 'lucide-react';
+import { BuildingIcon, CheckIcon, Home, Lightbulb, Wifi, Users, ShieldCheck, LayoutGrid } from 'lucide-react';
 
 const Condominios = () => {
   return (
@@ -74,7 +73,7 @@ const Condominios = () => {
                 description: "Opções flexíveis para atender às necessidades de cada morador com até 8 Gbps de velocidade."
               },
               {
-                icon: <LayoutPlan size={24} />,
+                icon: <LayoutGrid size={24} />,
                 title: "Projeto personalizado",
                 description: "Solução sob medida para as características e necessidades específicas do seu condomínio."
               },
