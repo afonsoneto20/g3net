@@ -1,6 +1,10 @@
+
 import React from 'react';
 import { Button } from '../ui/button';
 import { ArrowRight, Wifi, Zap, CheckCircle } from 'lucide-react';
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
@@ -21,17 +25,57 @@ const Hero = () => {
             </p>
             
             <div className="flex flex-wrap gap-4 mb-10">
-              <Button 
-                size="lg" 
-                className="btn-hover gap-2"
-              >
-                Ver planos
-                <ArrowRight />
-              </Button>
+              <Dialog>
+                <DialogTrigger asChild>
+                  <Button 
+                    size="lg" 
+                    className="btn-hover gap-2"
+                  >
+                    Ver planos
+                    <ArrowRight />
+                  </Button>
+                </DialogTrigger>
+                <DialogContent className="sm:max-w-md">
+                  <DialogHeader>
+                    <DialogTitle>Escolha o tipo de residência</DialogTitle>
+                    <DialogDescription>
+                      Selecione o tipo de residência para ver os planos disponíveis
+                    </DialogDescription>
+                  </DialogHeader>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-4">
+                    <Card className="cursor-pointer hover:border-primary transition-all">
+                      <Link to="/residencial/casa">
+                        <CardHeader className="pb-2">
+                          <CardTitle className="text-lg">Casa</CardTitle>
+                        </CardHeader>
+                        <CardContent>
+                          <CardDescription>Planos especiais para casas com velocidades simétricas</CardDescription>
+                        </CardContent>
+                      </Link>
+                    </Card>
+                    <Card className="cursor-pointer hover:border-primary transition-all">
+                      <Link to="/residencial/apartamento">
+                        <CardHeader className="pb-2">
+                          <CardTitle className="text-lg">Apartamento</CardTitle>
+                        </CardHeader>
+                        <CardContent>
+                          <CardDescription>Planos otimizados para apartamentos em condomínios</CardDescription>
+                        </CardContent>
+                      </Link>
+                    </Card>
+                  </div>
+                </DialogContent>
+              </Dialog>
               <Button 
                 variant="outline" 
                 size="lg"
                 className="btn-hover"
+                onClick={() => {
+                  const coverageSection = document.getElementById('coverage');
+                  if (coverageSection) {
+                    coverageSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
               >
                 Verificar cobertura
               </Button>
@@ -44,7 +88,7 @@ const Hero = () => {
               </div>
               <div className="flex items-center">
                 <CheckCircle size={20} className="text-primary-500 mr-2" />
-                <span>Suporte 24h</span>
+                <span>Suporte personalizado</span>
               </div>
             </div>
           </div>

@@ -4,7 +4,9 @@ import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { BuildingIcon, CheckIcon, Home, Lightbulb, Wifi, Users, ShieldCheck } from 'lucide-react';
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { Link } from 'react-router-dom';
+import { BuildingIcon, CheckIcon, Home, Lightbulb, Wifi, Users, ShieldCheck, LayoutPlan } from 'lucide-react';
 
 const Condominios = () => {
   return (
@@ -57,24 +59,24 @@ const Condominios = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
+                icon: <BuildingIcon size={24} />,
+                title: "Acesso nas áreas comuns",
+                description: "Cobertura completa em áreas comuns do condomínio."
+              },
+              {
                 icon: <Wifi size={24} />,
-                title: "Acesso em todo o condomínio",
-                description: "Cobertura completa em áreas comuns e apartamentos."
+                title: "Tecnologia Mesh",
+                description: "Cobertura Wi-Fi completa para grandes apartamentos com sinal estável em todos os ambientes."
               },
               {
                 icon: <Users size={24} />,
                 title: "Planos para cada perfil",
-                description: "Opções flexíveis para atender às necessidades de cada morador."
+                description: "Opções flexíveis para atender às necessidades de cada morador com até 8 Gbps de velocidade."
               },
               {
-                icon: <BuildingIcon size={24} />,
-                title: "Valorização do imóvel",
-                description: "Internet de qualidade aumenta o valor de mercado do empreendimento."
-              },
-              {
-                icon: <ShieldCheck size={24} />,
-                title: "Sistema de segurança",
-                description: "Integração com câmeras e portaria remota."
+                icon: <LayoutPlan size={24} />,
+                title: "Projeto personalizado",
+                description: "Solução sob medida para as características e necessidades específicas do seu condomínio."
               },
               {
                 icon: <Home size={24} />,
@@ -83,8 +85,8 @@ const Condominios = () => {
               },
               {
                 icon: <Lightbulb size={24} />,
-                title: "Suporte técnico exclusivo",
-                description: "Atendimento prioritário para condomínios."
+                title: "Suporte prioritário",
+                description: "Atendimento prioritário e personalizado para condomínios."
               }
             ].map((feature, index) => (
               <Card key={index} className="animate-fade-up border border-gray-100 shadow hover:shadow-md transition-all duration-300">
@@ -155,8 +157,132 @@ const Condominios = () => {
           </div>
           
           <div className="mt-16 text-center">
-            <Button size="lg" className="gap-2">
-              Solicitar avaliação para o seu condomínio
+            <Dialog>
+              <DialogTrigger asChild>
+                <Button size="lg" className="gap-2">
+                  Ver planos
+                  <CheckIcon size={18} />
+                </Button>
+              </DialogTrigger>
+              <DialogContent className="sm:max-w-md">
+                <DialogHeader>
+                  <DialogTitle>Escolha o tipo de plano</DialogTitle>
+                  <DialogDescription>
+                    Selecione o tipo de residência para ver os planos disponíveis
+                  </DialogDescription>
+                </DialogHeader>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-4">
+                  <Card className="cursor-pointer hover:border-primary transition-all">
+                    <Link to="/residencial/casa">
+                      <CardHeader className="pb-2">
+                        <CardTitle className="text-lg">Casa</CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <CardDescription>Planos especiais para casas com velocidades simétricas</CardDescription>
+                      </CardContent>
+                    </Link>
+                  </Card>
+                  <Card className="cursor-pointer hover:border-primary transition-all">
+                    <Link to="/residencial/apartamento">
+                      <CardHeader className="pb-2">
+                        <CardTitle className="text-lg">Apartamento</CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <CardDescription>Planos otimizados para apartamentos em condomínios</CardDescription>
+                      </CardContent>
+                    </Link>
+                  </Card>
+                </div>
+              </DialogContent>
+            </Dialog>
+          </div>
+        </div>
+      </section>
+      
+      {/* Admin Area Plans */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16 animate-fade-up">
+            <h2 className="text-3xl font-bold mb-4">Planos para Áreas Comuns e Administrativas</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Banda larga de alta velocidade para espaços comuns e administração do seu condomínio
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+            {[
+              {
+                title: "Condomínio 600 Mbps",
+                price: "199,90",
+                speed: "600 Mbps",
+                features: [
+                  "Velocidade simétrica",
+                  "Upload de 600 Mbps",
+                  "Suporte prioritário",
+                  "Ideal para portarias e áreas administrativas",
+                  "Wi-Fi para áreas comuns"
+                ]
+              },
+              {
+                title: "Condomínio 1 Gbps",
+                price: "299,90",
+                speed: "1 Gbps",
+                features: [
+                  "Velocidade simétrica",
+                  "Upload de 1 Gbps",
+                  "Suporte prioritário",
+                  "Monitoramento 24/7",
+                  "Wi-Fi para áreas comuns",
+                  "Ideal para áreas de lazer"
+                ]
+              }
+            ].map((plan, index) => (
+              <Card key={index} className={`animate-fade-up border ${index === 1 ? 'border-primary-500 shadow-lg' : 'border-gray-100 shadow'} h-full flex flex-col`}>
+                <CardHeader>
+                  <CardTitle className="text-xl font-bold">{plan.title}</CardTitle>
+                  <div className="mt-1 text-primary-500 font-bold text-3xl">{plan.speed}</div>
+                </CardHeader>
+                <CardContent className="flex-1 flex flex-col">
+                  <div className="mb-6">
+                    <div className="text-sm text-gray-500">Mensalidade</div>
+                    <div className="flex items-end gap-1">
+                      <span className="text-2xl font-bold text-gray-900">R$</span>
+                      <span className="text-4xl font-bold text-gray-900">{plan.price}</span>
+                      <span className="text-gray-500 mb-1">/mês</span>
+                    </div>
+                  </div>
+                  
+                  <ul className="mb-8 flex-1">
+                    {plan.features.map((feature, i) => (
+                      <li key={i} className="flex items-center mb-3">
+                        <svg className="w-5 h-5 text-primary-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                        </svg>
+                        <span className="text-gray-700">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  
+                  <div className="mt-auto">
+                    <p className="text-sm text-gray-500 mb-4">
+                      Pontos adicionais disponíveis por R$ 50,00/mês cada.
+                    </p>
+                    <Button 
+                      variant={index === 1 ? "default" : "outline"}
+                      className="w-full gap-2"
+                    >
+                      Solicitar orçamento
+                      <CheckIcon size={18} />
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+          
+          <div className="mt-12 text-center">
+            <Button size="lg" variant="outline" className="gap-2">
+              Solicitar orçamento personalizado
               <CheckIcon size={18} />
             </Button>
           </div>
@@ -164,7 +290,7 @@ const Condominios = () => {
       </section>
       
       {/* Testimonials */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 animate-fade-up">
             <h2 className="text-3xl font-bold mb-4">O que dizem nossos clientes</h2>

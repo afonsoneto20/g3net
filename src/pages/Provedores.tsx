@@ -4,7 +4,8 @@ import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { CheckIcon, Network, Globe, Server, ShieldCheck, Zap, Clock } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { CheckIcon, Network, Globe, Server, ShieldCheck, Zap, Clock, Cable } from 'lucide-react';
 
 const Provedores = () => {
   return (
@@ -77,14 +78,14 @@ const Provedores = () => {
                 description: "Proteção avançada contra ataques de negação de serviço."
               },
               {
-                icon: <Zap size={24} />,
-                title: "Backbone Redundante",
-                description: "Múltiplas rotas para garantir disponibilidade máxima."
+                icon: <Cable size={24} />,
+                title: "Fibra Apagada",
+                description: "Pares de fibra óptica para conexões ponto a ponto de alta capacidade."
               },
               {
                 icon: <Clock size={24} />,
-                title: "Suporte 24/7",
-                description: "Time técnico especializado disponível a qualquer momento."
+                title: "Suporte personalizado",
+                description: "Time técnico especializado disponível para atendimento prioritário."
               }
             ].map((solution, index) => (
               <Card key={index} className="animate-fade-up border border-gray-100 shadow hover:shadow-md transition-all duration-300">
@@ -146,8 +147,8 @@ const Provedores = () => {
                 ]
               },
               {
-                title: "Presença nacional",
-                description: "Pontos de presença estrategicamente localizados em todo o território nacional, proporcionando baixa latência e alta disponibilidade.",
+                title: "Presença internacional",
+                description: "Pontos de presença estrategicamente localizados em diversos países, proporcionando baixa latência e alta disponibilidade.",
                 features: [
                   "PTTs em diversas localidades",
                   "Conexão direta com os maiores datacenters",
@@ -178,10 +179,12 @@ const Provedores = () => {
           </div>
           
           <div className="mt-16 text-center">
-            <Button size="lg" className="gap-2">
-              Solicitar proposta comercial
-              <CheckIcon size={18} />
-            </Button>
+            <Link to="/empresarial">
+              <Button size="lg" className="gap-2">
+                Solicitar proposta comercial
+                <CheckIcon size={18} />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -199,9 +202,11 @@ const Provedores = () => {
                 Agendar demonstração
                 <CheckIcon size={18} />
               </Button>
-              <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-primary-500">
-                Solicitar contato
-              </Button>
+              <Link to="/empresarial">
+                <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-primary-500">
+                  Solicitar orçamento
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

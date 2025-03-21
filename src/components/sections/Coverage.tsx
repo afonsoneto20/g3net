@@ -91,11 +91,11 @@ const Coverage = () => {
               
               <div className="mt-6 grid grid-cols-2 gap-4">
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
-                  <h4 className="font-semibold text-xl mb-2">+30</h4>
+                  <h4 className="font-semibold text-xl mb-2">7</h4>
                   <p className="text-blue-100">Cidades atendidas</p>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
-                  <h4 className="font-semibold text-xl mb-2">+100k</h4>
+                  <h4 className="font-semibold text-xl mb-2">+5k</h4>
                   <p className="text-blue-100">Clientes conectados</p>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
@@ -103,8 +103,8 @@ const Coverage = () => {
                   <p className="text-blue-100">Uptime garantido</p>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
-                  <h4 className="font-semibold text-xl mb-2">24/7</h4>
-                  <p className="text-blue-100">Suporte técnico</p>
+                  <h4 className="font-semibold text-xl mb-2">100%</h4>
+                  <p className="text-blue-100">Suporte personalizado</p>
                 </div>
               </div>
             </div>
