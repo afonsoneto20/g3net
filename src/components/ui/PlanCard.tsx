@@ -5,6 +5,16 @@ import { cn } from '@/lib/utils';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
+/**
+ * Interface para as propriedades do componente PlanCard
+ * @param title - Nome do plano
+ * @param speed - Velocidade do plano (ex: "500 Mbps")
+ * @param price - Preço do plano (ex: "99,90")
+ * @param features - Lista de recursos incluídos no plano
+ * @param popular - Indica se é o plano mais popular (opcional)
+ * @param className - Classes CSS adicionais (opcional)
+ * @param href - Link para a página de contratação (opcional)
+ */
 interface PlanCardProps {
   title: string;
   speed: string;
@@ -15,6 +25,10 @@ interface PlanCardProps {
   href?: string;
 }
 
+/**
+ * Componente de card para exibir planos de internet
+ * Usado nas seções de planos do site
+ */
 const PlanCard = ({
   title,
   speed,
@@ -32,17 +46,20 @@ const PlanCard = ({
         className
       )}
     >
+      {/* Badge de plano popular */}
       {popular && (
         <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-primary-500 text-white px-4 py-1 rounded-full text-sm font-medium">
           Mais popular
         </div>
       )}
       
+      {/* Cabeçalho do plano */}
       <div className="mb-6">
         <h3 className="text-xl font-bold text-gray-900">{title}</h3>
         <div className="mt-1 text-primary-500 font-bold text-3xl">{speed}</div>
       </div>
       
+      {/* Preço do plano */}
       <div className="mb-6">
         <div className="text-sm text-gray-500">A partir de</div>
         <div className="flex items-end gap-1">
@@ -52,6 +69,7 @@ const PlanCard = ({
         </div>
       </div>
       
+      {/* Lista de recursos */}
       <ul className="mb-8 flex-1">
         {features.map((feature, index) => (
           <li key={index} className="flex items-center mb-3">
@@ -63,6 +81,7 @@ const PlanCard = ({
         ))}
       </ul>
       
+      {/* Botão de contratação */}
       <Button 
         variant={popular ? "default" : "outline"}
         className="w-full gap-2"

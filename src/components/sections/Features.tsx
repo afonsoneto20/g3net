@@ -3,7 +3,11 @@ import React from 'react';
 import FeatureCard from '../ui/FeatureCard';
 import { Shield, Clock, Zap, Headphones, WifiOff, Award } from 'lucide-react';
 
+/**
+ * Componente que exibe os principais recursos e diferenciais do serviço
+ */
 const Features = () => {
+  // Lista de recursos a serem exibidos
   const features = [
     {
       title: "Conexão segura",
@@ -40,6 +44,7 @@ const Features = () => {
   return (
     <section id="features" className="section bg-white">
       <div className="max-w-7xl mx-auto">
+        {/* Cabeçalho da seção */}
         <div className="text-center mb-16 animate-fade-up">
           <div className="highlight-chip mb-4">
             <Award size={14} className="mr-1" /> Vantagens G3NET
@@ -50,6 +55,7 @@ const Features = () => {
           </p>
         </div>
         
+        {/* Grid de cards de recursos */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <div 

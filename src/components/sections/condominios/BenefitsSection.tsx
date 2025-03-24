@@ -4,7 +4,12 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { BuildingIcon, Wifi, Users, LayoutGrid, Home, Lightbulb } from 'lucide-react';
 import FeatureCard from '@/components/ui/FeatureCard';
 
+/**
+ * Componente que apresenta os benefícios para condomínios
+ * Exibe cards com os principais benefícios da solução
+ */
 const BenefitsSection = () => {
+  // Lista de benefícios exibidos na seção
   const benefits = [
     {
       icon: <BuildingIcon size={24} />,
@@ -41,6 +46,7 @@ const BenefitsSection = () => {
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Cabeçalho da seção */}
         <div className="text-center mb-16 animate-fade-up">
           <h2 className="text-3xl font-bold mb-4">Vantagens para o seu condomínio</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -48,6 +54,7 @@ const BenefitsSection = () => {
           </p>
         </div>
         
+        {/* Grid de cards de benefícios */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {benefits.map((feature, index) => (
             <Card key={index} className="animate-fade-up border border-gray-100 shadow hover:shadow-md transition-all duration-300">
