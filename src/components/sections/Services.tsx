@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -17,7 +16,7 @@ const Services = () => {
       features: [
         "Download até 600 Mbps",
         "Upload até 300 Mbps",
-        "Wi-Fi de alta performance",
+        "Wi-Fi 6+ de alta performance",
         "Suporte personalizado",
         "Instalação gratuita"
       ],
@@ -30,7 +29,7 @@ const Services = () => {
       features: [
         "Download até 1 Gbps",
         "Upload até 500 Mbps",
-        "Wi-Fi de alta performance",
+        "Wi-Fi 6+ de alta performance",
         "Suporte personalizado",
         "Instalação gratuita"
       ],
@@ -61,7 +60,7 @@ const Services = () => {
         "Velocidade simétrica",
         "Download e upload de 1 Gbps",
         "Equipamento com portas 1GE",
-        "Wi-Fi de alta performance",
+        "Wi-Fi 6+ de alta performance",
         "Suporte personalizado",
         "Instalação gratuita"
       ],
@@ -89,7 +88,7 @@ const Services = () => {
         "Velocidade simétrica",
         "Download e upload de 4 Gbps",
         "Equipamento com portas SFP+",
-        "Wi-Fi de alta performance",
+        "Wi-Fi 6+ de alta performance",
         "Suporte personalizado",
         "Instalação gratuita"
       ],

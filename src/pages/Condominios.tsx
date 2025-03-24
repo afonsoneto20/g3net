@@ -65,7 +65,7 @@ const Condominios = () => {
               {
                 icon: <Wifi size={24} />,
                 title: "Tecnologia Mesh",
-                description: "Cobertura Wi-Fi completa para grandes apartamentos com sinal estável em todos os ambientes."
+                description: "Cobertura Wi-Fi 6+ completa para grandes apartamentos com sinal estável em todos os ambientes."
               },
               {
                 icon: <Users size={24} />,
@@ -226,7 +226,7 @@ const Condominios = () => {
                   "Upload de 600 Mbps",
                   "Suporte prioritário",
                   "Ideal para portarias e áreas administrativas",
-                  "Wi-Fi para áreas comuns"
+                  "Wi-Fi 6+ para áreas comuns"
                 ]
               },
               {
@@ -238,7 +238,7 @@ const Condominios = () => {
                   "Upload de 1 Gbps",
                   "Suporte prioritário",
                   "Monitoramento 24/7",
-                  "Wi-Fi para áreas comuns",
+                  "Wi-Fi 6+ para áreas comuns",
                   "Ideal para áreas de lazer"
                 ]
               }

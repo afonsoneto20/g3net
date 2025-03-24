@@ -39,7 +39,7 @@ const Casa = () => {
         "Velocidade simétrica",
         "Download e upload de 1 Gbps",
         "Equipamento com portas 1GE",
-        "Wi-Fi de alta performance",
+        "Wi-Fi 6+ de alta performance",
         "Suporte personalizado",
         "Instalação gratuita"
       ],
@@ -67,7 +67,7 @@ const Casa = () => {
         "Velocidade simétrica",
         "Download e upload de 4 Gbps",
         "Equipamento com portas SFP+",
-        "Wi-Fi de alta performance",
+        "Wi-Fi 6+ de alta performance",
         "Suporte personalizado",
         "Instalação gratuita"
       ],
@@ -81,7 +81,7 @@ const Casa = () => {
         "Velocidade simétrica",
         "Download e upload de 8 Gbps",
         "Equipamento com portas SFP+",
-        "Wi-Fi de alta performance",
+        "Wi-Fi 6+ de alta performance",
         "Suporte personalizado",
         "Instalação gratuita",
         "Prioridade no atendimento"

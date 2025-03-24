@@ -17,7 +17,7 @@ const Apartamento = () => {
       features: [
         "Download até 600 Mbps",
         "Upload até 300 Mbps",
-        "Wi-Fi de alta performance",
+        "Wi-Fi 6+ de alta performance",
         "Suporte personalizado",
         "Instalação gratuita"
       ],
@@ -30,7 +30,7 @@ const Apartamento = () => {
       features: [
         "Download até 1 Gbps",
         "Upload até 500 Mbps",
-        "Wi-Fi de alta performance",
+        "Wi-Fi 6+ de alta performance",
         "Suporte personalizado",
         "Instalação gratuita"
       ],
