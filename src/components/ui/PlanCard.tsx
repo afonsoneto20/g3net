@@ -12,6 +12,7 @@ interface PlanCardProps {
   features: string[];
   popular?: boolean;
   className?: string;
+  href?: string;
 }
 
 const PlanCard = ({
@@ -21,6 +22,7 @@ const PlanCard = ({
   features,
   popular = false,
   className,
+  href = '/contratar',
 }: PlanCardProps) => {
   return (
     <div 

@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { CheckIcon, Home, Shield, Clock, Zap, Cable, Bolt } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Casa = () => {
   const installationSteps = [
@@ -252,9 +253,12 @@ const Casa = () => {
                   <Button 
                     variant={plan.popular ? "default" : "outline"}
                     className="w-full gap-2 mt-auto"
+                    asChild
                   >
-                    Contratar agora
-                    <CheckIcon size={18} />
+                    <Link to={`/contratar/${encodeURIComponent(plan.title)}`}>
+                      Contratar agora
+                      <CheckIcon size={18} />
+                    </Link>
                   </Button>
                 </CardContent>
               </Card>

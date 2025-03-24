@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
@@ -274,15 +273,16 @@ const Condominios = () => {
                     <p className="text-sm text-gray-500 mb-4">
                       Pontos adicionais disponíveis por R$ 50,00/mês cada.
                     </p>
-                    <Link to="/contratar">
-                      <Button 
-                        variant={index === 1 ? "default" : "outline"}
-                        className="w-full gap-2"
-                      >
+                    <Button 
+                      variant={index === 1 ? "default" : "outline"}
+                      className="w-full gap-2"
+                      asChild
+                    >
+                      <Link to={`/contratar/${encodeURIComponent(plan.title)}`}>
                         Contratar para meu condomínio
                         <CheckIcon size={18} />
-                      </Button>
-                    </Link>
+                      </Link>
+                    </Button>
                   </div>
                 </CardContent>
               </Card>

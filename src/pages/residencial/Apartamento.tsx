@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { CheckIcon, Building, Wifi, Clock, Zap, ShieldCheck, HomeIcon, Users } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Apartamento = () => {
   const plans = [
@@ -180,9 +181,12 @@ const Apartamento = () => {
                   <Button 
                     variant={plan.popular ? "default" : "outline"}
                     className="w-full gap-2 mt-auto"
+                    asChild
                   >
-                    Contratar agora
-                    <CheckIcon size={18} />
+                    <Link to={`/contratar/${encodeURIComponent(plan.title)}`}>
+                      Contratar agora
+                      <CheckIcon size={18} />
+                    </Link>
                   </Button>
                 </CardContent>
               </Card>
@@ -197,11 +201,11 @@ const Apartamento = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-up">
               <div className="highlight-chip mb-4">
-                <Building size={14} className="mr-1" /> Para síndicos e administradores
+                <Building size={14} className="mr-1" /> Para síndicos, administradores e moradores
               </div>
               <h2 className="text-3xl font-bold mb-6">Leve a G3NET para o seu condomínio</h2>
               <p className="text-xl text-gray-600 mb-8">
-                Você é síndico ou administrador e deseja trazer internet de qualidade para todo o condomínio? A G3NET tem soluções completas:
+                Você é síndico, administrador ou apenas um morador que deseja trazer internet de qualidade para todo o condomínio? A G3NET tem soluções completas:
               </p>
               <ul className="space-y-4 mb-8">
                 {[
@@ -220,12 +224,16 @@ const Apartamento = () => {
                 ))}
               </ul>
               <div className="flex flex-wrap gap-4">
-                <Button size="lg" className="gap-2">
-                  Solicitar visita técnica
-                  <CheckIcon size={18} />
+                <Button size="lg" className="gap-2" asChild>
+                  <Link to="/contratar">
+                    Solicitar visita técnica
+                    <CheckIcon size={18} />
+                  </Link>
                 </Button>
-                <Button variant="outline" size="lg">
-                  Saiba mais
+                <Button variant="outline" size="lg" asChild>
+                  <Link to="/condominios">
+                    Saiba mais
+                  </Link>
                 </Button>
               </div>
             </div>
