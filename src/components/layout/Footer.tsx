@@ -2,11 +2,16 @@
 import React from 'react';
 import { Facebook, Instagram, Twitter, Linkedin, MapPin, Phone, Mail } from 'lucide-react';
 
+/**
+ * Componente de rodapé do site
+ * Exibe informações de contato, links úteis e redes sociais
+ */
 const Footer = () => {
   return (
     <footer className="bg-gradient-blue text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Informações da empresa e redes sociais */}
           <div>
             <div className="text-2xl font-bold mb-4">G3NET</div>
             <p className="text-blue-100 mb-6">
@@ -28,6 +33,7 @@ const Footer = () => {
             </div>
           </div>
           
+          {/* Links rápidos */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Links rápidos</h3>
             <ul className="space-y-3">
@@ -39,6 +45,7 @@ const Footer = () => {
             </ul>
           </div>
           
+          {/* Lista de serviços */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Nossos serviços</h3>
             <ul className="space-y-3">
@@ -50,6 +57,7 @@ const Footer = () => {
             </ul>
           </div>
           
+          {/* Informações de contato */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Contato</h3>
             <ul className="space-y-3">
@@ -69,6 +77,7 @@ const Footer = () => {
           </div>
         </div>
         
+        {/* Direitos autorais */}
         <div className="border-t border-blue-400/30 mt-12 pt-8 text-center text-blue-100">
           <p>&copy; {new Date().getFullYear()} G3NET. Todos os direitos reservados.</p>
         </div>
