@@ -1,0 +1,124 @@
+
+/* 
+ * Reset CSS
+ * Normaliza os estilos entre diferentes navegadores
+ */
+
+/* Box sizing para todos os elementos */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Redefine estilos básicos para HTML e body */
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  color: #333;
+  background-color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Remove estilos de listas */
+ul, ol {
+  list-style: none;
+}
+
+/* Redefine estilos de links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Redefine estilos de imagens */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Torna os elementos de formulário consistentes entre navegadores */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* Remove o espaçamento padrão dos parágrafos */
+p {
+  margin: 0;
+}
+
+/* Define tamanhos de cabeçalhos consistentes */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1.125rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+/* Mantém o conteúdo editável consistente */
+[contenteditable] {
+  outline: none;
+}
+
+/* Impede a seleção de texto em alguns elementos */
+.no-select {
+  user-select: none;
+}
+
+/* Oculta conteúdo para leitores de tela */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}

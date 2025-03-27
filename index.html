@@ -16,16 +16,325 @@
     
     <!-- Importação de fontes -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    
+    <!-- Importação de estilos -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/components.css">
   </head>
 
   <body>
-    <!-- Container principal da aplicação React -->
-    <div id="root"></div>
-    
+    <!-- Barra de navegação -->
+    <nav class="navbar">
+      <div class="navbar-container">
+        <div class="navbar-logo">
+          <a href="/" class="logo">G3NET</a>
+        </div>
+        
+        <!-- Links de navegação em desktop -->
+        <div class="navbar-links">
+          <a href="/" class="nav-link active">Início</a>
+          <a href="/planos.html" class="nav-link">Planos</a>
+          <a href="/condominios.html" class="nav-link">Condomínios</a>
+          <a href="/cobertura.html" class="nav-link">Cobertura</a>
+          <a href="/sobre.html" class="nav-link">Sobre</a>
+          <a href="/contato.html" class="nav-link">Contato</a>
+        </div>
+        
+        <!-- Botão de login em desktop -->
+        <div class="navbar-actions">
+          <a href="/cliente.html" class="btn btn-outline">Área do Cliente</a>
+        </div>
+        
+        <!-- Botão de menu para dispositivos móveis -->
+        <div class="mobile-menu-button">
+          <button id="menuToggle">
+            <span class="menu-icon"></span>
+          </button>
+        </div>
+      </div>
+      
+      <!-- Menu para dispositivos móveis -->
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="/" class="mobile-link active">Início</a>
+        <a href="/planos.html" class="mobile-link">Planos</a>
+        <a href="/condominios.html" class="mobile-link">Condomínios</a>
+        <a href="/cobertura.html" class="mobile-link">Cobertura</a>
+        <a href="/sobre.html" class="mobile-link">Sobre</a>
+        <a href="/contato.html" class="mobile-link">Contato</a>
+        <a href="/cliente.html" class="mobile-link client-link">Área do Cliente</a>
+      </div>
+    </nav>
+
+    <!-- Conteúdo principal -->
+    <main>
+      <!-- Seção Hero -->
+      <section class="hero">
+        <div class="container">
+          <div class="hero-content">
+            <div class="hero-badge">Internet para sua casa</div>
+            <h1>Internet rápida e estável para você</h1>
+            <p>Conexão de fibra óptica de alta velocidade com tecnologia de ponta para sua casa ou empresa.</p>
+            <div class="hero-buttons">
+              <a href="/planos.html" class="btn btn-primary">Ver planos</a>
+              <a href="/cobertura.html" class="btn btn-outline">Verificar cobertura</a>
+            </div>
+          </div>
+          <div class="hero-image">
+            <img src="images/hero-img.jpg" alt="Internet de alta velocidade G3NET">
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção de serviços -->
+      <section class="services" id="services">
+        <div class="container">
+          <div class="section-header">
+            <div class="highlight-chip">Nossos serviços</div>
+            <h2>O que oferecemos</h2>
+            <p>Soluções completas de conectividade para você e sua família.</p>
+          </div>
+          
+          <div class="services-grid">
+            <div class="service-card">
+              <div class="service-icon home-icon"></div>
+              <h3>Internet Residencial</h3>
+              <p>Planos a partir de 200 Mbps com a melhor experiência para sua casa.</p>
+              <a href="/planos.html" class="card-link">Conheça os planos</a>
+            </div>
+            
+            <div class="service-card">
+              <div class="service-icon building-icon"></div>
+              <h3>Internet para Condomínios</h3>
+              <p>Soluções personalizadas para condomínios com descontos especiais.</p>
+              <a href="/condominios.html" class="card-link">Saiba mais</a>
+            </div>
+            
+            <div class="service-card">
+              <div class="service-icon business-icon"></div>
+              <h3>Internet Empresarial</h3>
+              <p>Conexão estável e segura para impulsionar seu negócio.</p>
+              <a href="/empresas.html" class="card-link">Ver opções</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção de features -->
+      <section class="features" id="features">
+        <div class="container">
+          <div class="section-header">
+            <div class="highlight-chip">Vantagens G3NET</div>
+            <h2>Por que escolher a G3NET?</h2>
+            <p>Oferecemos mais do que internet, entregamos uma experiência completa de conectividade.</p>
+          </div>
+          
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon shield-icon"></div>
+              <h3>Conexão segura</h3>
+              <p>Sua navegação sempre protegida com as melhores tecnologias de segurança digital.</p>
+            </div>
+            
+            <div class="feature-card">
+              <div class="feature-icon headphone-icon"></div>
+              <h3>Suporte 24/7</h3>
+              <p>Equipe técnica disponível 24 horas por dia, 7 dias por semana para te ajudar.</p>
+            </div>
+            
+            <div class="feature-card">
+              <div class="feature-icon speed-icon"></div>
+              <h3>Ultra velocidade</h3>
+              <p>Fibra óptica de ponta a ponta garantindo alta velocidade e baixa latência.</p>
+            </div>
+            
+            <div class="feature-card">
+              <div class="feature-icon clock-icon"></div>
+              <h3>Instalação rápida</h3>
+              <p>Instalação ágil e profissional em até 48 horas após a contratação.</p>
+            </div>
+            
+            <div class="feature-card">
+              <div class="feature-icon signal-icon"></div>
+              <h3>Sem quedas</h3>
+              <p>Rede redundante que garante a maior estabilidade e continuidade do mercado.</p>
+            </div>
+            
+            <div class="feature-card">
+              <div class="feature-icon award-icon"></div>
+              <h3>Qualidade premium</h3>
+              <p>Equipamentos de última geração para a melhor experiência de internet.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção de cobertura -->
+      <section class="coverage" id="coverage">
+        <div class="container">
+          <div class="section-header light">
+            <div class="highlight-chip">Locais atendidos</div>
+            <h2>Nossa área de cobertura</h2>
+            <p>Estamos presentes em diversas regiões para levar internet de qualidade a mais pessoas.</p>
+          </div>
+          
+          <div class="coverage-content">
+            <div class="coverage-map">
+              <!-- Aqui entraria um mapa interativo ou imagem ilustrativa da cobertura -->
+              <img src="images/coverage-map.jpg" alt="Mapa de cobertura G3NET">
+            </div>
+            
+            <div class="coverage-info">
+              <div class="coverage-stat">
+                <span class="coverage-number">15+</span>
+                <span class="coverage-label">Cidades</span>
+              </div>
+              
+              <div class="coverage-stat">
+                <span class="coverage-number">50K+</span>
+                <span class="coverage-label">Clientes</span>
+              </div>
+              
+              <div class="coverage-stat">
+                <span class="coverage-number">98%</span>
+                <span class="coverage-label">Satisfação</span>
+              </div>
+              
+              <a href="/cobertura.html" class="btn btn-primary">Verificar meu endereço</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção de contato -->
+      <section class="contact" id="contact">
+        <div class="container">
+          <div class="contact-content">
+            <div class="contact-info">
+              <h2>Entre em contato</h2>
+              <p>Estamos prontos para atender você e responder todas as suas dúvidas.</p>
+              
+              <div class="contact-methods">
+                <div class="contact-method">
+                  <div class="contact-icon phone-icon"></div>
+                  <div class="contact-text">
+                    <h3>Telefone</h3>
+                    <p>(11) 3000-1000</p>
+                  </div>
+                </div>
+                
+                <div class="contact-method">
+                  <div class="contact-icon email-icon"></div>
+                  <div class="contact-text">
+                    <h3>E-mail</h3>
+                    <p>contato@g3net.com.br</p>
+                  </div>
+                </div>
+                
+                <div class="contact-method">
+                  <div class="contact-icon location-icon"></div>
+                  <div class="contact-text">
+                    <h3>Endereço</h3>
+                    <p>Av. Principal, 1000, Centro, São Paulo - SP</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="social-links">
+                <a href="#" class="social-link facebook-icon" aria-label="Facebook"></a>
+                <a href="#" class="social-link instagram-icon" aria-label="Instagram"></a>
+                <a href="#" class="social-link twitter-icon" aria-label="Twitter"></a>
+                <a href="#" class="social-link linkedin-icon" aria-label="LinkedIn"></a>
+              </div>
+            </div>
+            
+            <div class="contact-form">
+              <form id="contactForm">
+                <div class="form-group">
+                  <label for="name">Nome</label>
+                  <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                  <label for="email">E-mail</label>
+                  <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                  <label for="phone">Telefone</label>
+                  <input type="tel" id="phone" name="phone">
+                </div>
+                
+                <div class="form-group">
+                  <label for="message">Mensagem</label>
+                  <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Enviar mensagem</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-info">
+            <div class="footer-logo">G3NET</div>
+            <p>Conectando você ao que realmente importa. Internet rápida, estável e com o melhor suporte.</p>
+            <div class="social-links">
+              <a href="#" class="social-link facebook-icon" aria-label="Facebook"></a>
+              <a href="#" class="social-link instagram-icon" aria-label="Instagram"></a>
+              <a href="#" class="social-link twitter-icon" aria-label="Twitter"></a>
+              <a href="#" class="social-link linkedin-icon" aria-label="LinkedIn"></a>
+            </div>
+          </div>
+          
+          <div class="footer-links">
+            <h3>Links rápidos</h3>
+            <ul>
+              <li><a href="/planos.html">Planos</a></li>
+              <li><a href="/sobre.html">Sobre nós</a></li>
+              <li><a href="/cobertura.html">Cobertura</a></li>
+              <li><a href="/contato.html">Contato</a></li>
+              <li><a href="/suporte.html">Suporte</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-links">
+            <h3>Nossos serviços</h3>
+            <ul>
+              <li><a href="/planos.html">Internet Residencial</a></li>
+              <li><a href="/empresas.html">Internet Empresarial</a></li>
+              <li><a href="/telefonia.html">Telefonia</a></li>
+              <li><a href="/tv.html">TV por assinatura</a></li>
+              <li><a href="/app.html">Aplicativo</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-contact">
+            <h3>Contato</h3>
+            <ul>
+              <li><span class="footer-icon location-icon"></span> Av. Principal, 1000, Centro, São Paulo - SP</li>
+              <li><span class="footer-icon phone-icon"></span> (11) 3000-1000</li>
+              <li><span class="footer-icon email-icon"></span> contato@g3net.com.br</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="footer-bottom">
+          <p>&copy; <span id="currentYear"></span> G3NET. Todos os direitos reservados.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+
     <!-- IMPORTANTE: NÃO REMOVA ESTA TAG DE SCRIPT OU ESTE COMENTÁRIO! -->
     <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
-    
-    <!-- Script principal da aplicação -->
-    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

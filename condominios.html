@@ -1,0 +1,438 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <!-- Meta tags para configuração básica -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Título e descrição do site -->
+    <title>G3NET - Internet para Condomínios</title>
+    <meta name="description" content="G3NET - Internet de fibra óptica com alta velocidade e estabilidade para condomínios" />
+    <meta name="author" content="G3NET" />
+    
+    <!-- Configuração para compartilhamento em redes sociais -->
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    
+    <!-- Importação de fontes -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    
+    <!-- Importação de estilos -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/components.css">
+  </head>
+
+  <body>
+    <!-- Barra de navegação -->
+    <nav class="navbar">
+      <div class="navbar-container">
+        <div class="navbar-logo">
+          <a href="/" class="logo">G3NET</a>
+        </div>
+        
+        <!-- Links de navegação em desktop -->
+        <div class="navbar-links">
+          <a href="/" class="nav-link">Início</a>
+          <a href="/planos.html" class="nav-link">Planos</a>
+          <a href="/condominios.html" class="nav-link active">Condomínios</a>
+          <a href="/cobertura.html" class="nav-link">Cobertura</a>
+          <a href="/sobre.html" class="nav-link">Sobre</a>
+          <a href="/contato.html" class="nav-link">Contato</a>
+        </div>
+        
+        <!-- Botão de login em desktop -->
+        <div class="navbar-actions">
+          <a href="/cliente.html" class="btn btn-outline">Área do Cliente</a>
+        </div>
+        
+        <!-- Botão de menu para dispositivos móveis -->
+        <div class="mobile-menu-button">
+          <button id="menuToggle">
+            <span class="menu-icon"></span>
+          </button>
+        </div>
+      </div>
+      
+      <!-- Menu para dispositivos móveis -->
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="/" class="mobile-link">Início</a>
+        <a href="/planos.html" class="mobile-link">Planos</a>
+        <a href="/condominios.html" class="mobile-link active">Condomínios</a>
+        <a href="/cobertura.html" class="mobile-link">Cobertura</a>
+        <a href="/sobre.html" class="mobile-link">Sobre</a>
+        <a href="/contato.html" class="mobile-link">Contato</a>
+        <a href="/cliente.html" class="mobile-link client-link">Área do Cliente</a>
+      </div>
+    </nav>
+
+    <!-- Conteúdo principal -->
+    <main>
+      <!-- Seção Hero para Condomínios -->
+      <section class="hero-condos">
+        <div class="container">
+          <div class="hero-content">
+            <div class="hero-badge">Soluções para condomínios</div>
+            <h1>Internet para Condomínios</h1>
+            <p>Conectividade de alta qualidade para todos os moradores, com soluções personalizadas para cada condomínio.</p>
+            <div class="hero-buttons">
+              <a href="#contato" class="btn btn-primary">Solicitar visita técnica</a>
+              <a href="#como-funciona" class="btn btn-outline">Saiba mais</a>
+            </div>
+          </div>
+          <div class="hero-image">
+            <img src="images/condos-hero.jpg" alt="Internet para Condomínios">
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção de benefícios -->
+      <section class="benefits" id="beneficios">
+        <div class="container">
+          <div class="section-header">
+            <h2>Vantagens para o seu condomínio</h2>
+            <p>Soluções completas de conectividade que valorizam o seu empreendimento e melhoram a experiência dos moradores.</p>
+          </div>
+          
+          <div class="benefits-grid">
+            <div class="benefit-card">
+              <div class="benefit-icon building-icon"></div>
+              <h3>Acesso nas áreas comuns</h3>
+              <p>Cobertura completa em áreas comuns do condomínio.</p>
+            </div>
+            
+            <div class="benefit-card">
+              <div class="benefit-icon wifi-icon"></div>
+              <h3>Tecnologia Mesh</h3>
+              <p>Cobertura Wi-Fi 6+ completa para grandes apartamentos com sinal estável em todos os ambientes.</p>
+            </div>
+            
+            <div class="benefit-card">
+              <div class="benefit-icon users-icon"></div>
+              <h3>Planos para cada perfil</h3>
+              <p>Opções flexíveis para atender às necessidades de cada morador com até 8 Gbps de velocidade.</p>
+            </div>
+            
+            <div class="benefit-card">
+              <div class="benefit-icon grid-icon"></div>
+              <h3>Projeto personalizado</h3>
+              <p>Solução sob medida para as características e necessidades específicas do seu condomínio.</p>
+            </div>
+            
+            <div class="benefit-card">
+              <div class="benefit-icon home-icon"></div>
+              <h3>Instalação sem obras</h3>
+              <p>Sistema instalado sem intervenções estruturais complexas.</p>
+            </div>
+            
+            <div class="benefit-card">
+              <div class="benefit-icon support-icon"></div>
+              <h3>Suporte prioritário</h3>
+              <p>Atendimento prioritário e personalizado para condomínios.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção de como funciona -->
+      <section class="how-it-works" id="como-funciona">
+        <div class="container">
+          <div class="section-header">
+            <h2>Como funciona</h2>
+            <p>Um processo simples e eficiente para levar internet de qualidade ao seu condomínio.</p>
+          </div>
+          
+          <div class="steps">
+            <div class="step">
+              <div class="step-number">1</div>
+              <div class="step-content">
+                <h3>Avaliação técnica</h3>
+                <p>Nossa equipe realiza uma visita para avaliar a estrutura do condomínio e as necessidades específicas.</p>
+              </div>
+            </div>
+            
+            <div class="step">
+              <div class="step-number">2</div>
+              <div class="step-content">
+                <h3>Projeto personalizado</h3>
+                <p>Desenvolvemos um projeto técnico customizado para atender as particularidades do seu condomínio.</p>
+              </div>
+            </div>
+            
+            <div class="step">
+              <div class="step-number">3</div>
+              <div class="step-content">
+                <h3>Apresentação</h3>
+                <p>Apresentamos a proposta para a administração e/ou conselho com todos os detalhes técnicos e comerciais.</p>
+              </div>
+            </div>
+            
+            <div class="step">
+              <div class="step-number">4</div>
+              <div class="step-content">
+                <h3>Implementação</h3>
+                <p>Realizamos a instalação da infraestrutura de forma organizada e com o mínimo de interferência.</p>
+              </div>
+            </div>
+            
+            <div class="step">
+              <div class="step-number">5</div>
+              <div class="step-content">
+                <h3>Adesão dos moradores</h3>
+                <p>Os moradores podem escolher seus planos individuais de acordo com suas necessidades.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção de planos para administradores -->
+      <section class="admin-plans" id="planos">
+        <div class="container">
+          <div class="section-header">
+            <h2>Planos para administradores</h2>
+            <p>Soluções para áreas comuns e administração do condomínio.</p>
+          </div>
+          
+          <div class="plans-grid">
+            <div class="plan-card">
+              <div class="plan-header">
+                <h3>Básico</h3>
+                <div class="plan-speed">300 Mbps</div>
+                <div class="plan-price">
+                  <span class="currency">R$</span>
+                  <span class="value">199</span>
+                  <span class="period">/mês</span>
+                </div>
+              </div>
+              
+              <ul class="plan-features">
+                <li>Wi-Fi nas áreas comuns</li>
+                <li>Suporte técnico dedicado</li>
+                <li>Monitoramento da rede</li>
+                <li>Até 3 pontos de acesso</li>
+              </ul>
+              
+              <a href="#contato" class="btn btn-outline full-width">Solicitar proposta</a>
+            </div>
+            
+            <div class="plan-card popular">
+              <div class="popular-badge">Mais popular</div>
+              <div class="plan-header">
+                <h3>Premium</h3>
+                <div class="plan-speed">600 Mbps</div>
+                <div class="plan-price">
+                  <span class="currency">R$</span>
+                  <span class="value">349</span>
+                  <span class="period">/mês</span>
+                </div>
+              </div>
+              
+              <ul class="plan-features">
+                <li>Wi-Fi nas áreas comuns</li>
+                <li>Suporte técnico prioritário</li>
+                <li>Monitoramento avançado</li>
+                <li>Até 6 pontos de acesso</li>
+                <li>Gerenciamento remoto</li>
+              </ul>
+              
+              <a href="#contato" class="btn btn-primary full-width">Solicitar proposta</a>
+            </div>
+            
+            <div class="plan-card">
+              <div class="plan-header">
+                <h3>Empresarial</h3>
+                <div class="plan-speed">1 Gbps</div>
+                <div class="plan-price">
+                  <span class="currency">R$</span>
+                  <span class="value">599</span>
+                  <span class="period">/mês</span>
+                </div>
+              </div>
+              
+              <ul class="plan-features">
+                <li>Wi-Fi em todas as áreas</li>
+                <li>Suporte VIP 24/7</li>
+                <li>Monitoramento em tempo real</li>
+                <li>Pontos de acesso ilimitados</li>
+                <li>Gerenciamento avançado</li>
+                <li>IP fixo</li>
+              </ul>
+              
+              <a href="#contato" class="btn btn-outline full-width">Solicitar proposta</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção de depoimentos -->
+      <section class="testimonials">
+        <div class="container">
+          <div class="section-header">
+            <h2>O que dizem nossos clientes</h2>
+            <p>Condomínios que já contam com nossa solução de internet</p>
+          </div>
+          
+          <div class="testimonials-grid">
+            <div class="testimonial-card">
+              <div class="quote-icon"></div>
+              <p class="testimonial-text">A G3NET transformou a conectividade do nosso condomínio. Os moradores estão muito satisfeitos com a velocidade e estabilidade.</p>
+              <div class="testimonial-author">
+                <p class="author-name">Carlos Mendes</p>
+                <p class="author-role">Síndico do Residencial Parque Verde</p>
+              </div>
+            </div>
+            
+            <div class="testimonial-card">
+              <div class="quote-icon"></div>
+              <p class="testimonial-text">Processo de instalação extremamente organizado e profissional. O suporte técnico é rápido e eficiente quando precisamos.</p>
+              <div class="testimonial-author">
+                <p class="author-name">Mariana Silva</p>
+                <p class="author-role">Administradora do Condomínio Alta Vista</p>
+              </div>
+            </div>
+            
+            <div class="testimonial-card">
+              <div class="quote-icon"></div>
+              <p class="testimonial-text">Nosso condomínio ganhou mais valor no mercado após a instalação da rede de fibra ótica da G3NET. Recomendo a todos.</p>
+              <div class="testimonial-author">
+                <p class="author-name">Roberto Almeida</p>
+                <p class="author-role">Síndico do Edifício Costa Azul</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção de contato -->
+      <section class="contact" id="contato">
+        <div class="container">
+          <div class="contact-content">
+            <div class="contact-info">
+              <h2>Solicite uma visita</h2>
+              <p>Nossa equipe entrará em contato para agendar uma visita técnica gratuita ao seu condomínio.</p>
+              
+              <div class="contact-methods">
+                <div class="contact-method">
+                  <div class="contact-icon phone-icon"></div>
+                  <div class="contact-text">
+                    <h3>Telefone</h3>
+                    <p>(11) 3000-1000</p>
+                  </div>
+                </div>
+                
+                <div class="contact-method">
+                  <div class="contact-icon email-icon"></div>
+                  <div class="contact-text">
+                    <h3>E-mail</h3>
+                    <p>condominios@g3net.com.br</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="contact-form">
+              <form id="contactForm">
+                <div class="form-group">
+                  <label for="condoName">Nome do condomínio</label>
+                  <input type="text" id="condoName" name="condoName" required>
+                </div>
+                
+                <div class="form-group">
+                  <label for="contactName">Nome do responsável</label>
+                  <input type="text" id="contactName" name="contactName" required>
+                </div>
+                
+                <div class="form-group">
+                  <label for="contactPhone">Telefone</label>
+                  <input type="tel" id="contactPhone" name="contactPhone" required>
+                </div>
+                
+                <div class="form-group">
+                  <label for="contactEmail">E-mail</label>
+                  <input type="email" id="contactEmail" name="contactEmail" required>
+                </div>
+                
+                <div class="form-group">
+                  <label for="condoAddress">Endereço do condomínio</label>
+                  <input type="text" id="condoAddress" name="condoAddress" required>
+                </div>
+                
+                <div class="form-group">
+                  <label for="unitCount">Quantidade de unidades</label>
+                  <input type="number" id="unitCount" name="unitCount" required>
+                </div>
+                
+                <div class="form-group">
+                  <label for="message">Observações</label>
+                  <textarea id="message" name="message" rows="3"></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Solicitar visita</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-info">
+            <div class="footer-logo">G3NET</div>
+            <p>Conectando você ao que realmente importa. Internet rápida, estável e com o melhor suporte.</p>
+            <div class="social-links">
+              <a href="#" class="social-link facebook-icon" aria-label="Facebook"></a>
+              <a href="#" class="social-link instagram-icon" aria-label="Instagram"></a>
+              <a href="#" class="social-link twitter-icon" aria-label="Twitter"></a>
+              <a href="#" class="social-link linkedin-icon" aria-label="LinkedIn"></a>
+            </div>
+          </div>
+          
+          <div class="footer-links">
+            <h3>Links rápidos</h3>
+            <ul>
+              <li><a href="/planos.html">Planos</a></li>
+              <li><a href="/sobre.html">Sobre nós</a></li>
+              <li><a href="/cobertura.html">Cobertura</a></li>
+              <li><a href="/contato.html">Contato</a></li>
+              <li><a href="/suporte.html">Suporte</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-links">
+            <h3>Nossos serviços</h3>
+            <ul>
+              <li><a href="/planos.html">Internet Residencial</a></li>
+              <li><a href="/empresas.html">Internet Empresarial</a></li>
+              <li><a href="/telefonia.html">Telefonia</a></li>
+              <li><a href="/tv.html">TV por assinatura</a></li>
+              <li><a href="/app.html">Aplicativo</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-contact">
+            <h3>Contato</h3>
+            <ul>
+              <li><span class="footer-icon location-icon"></span> Av. Principal, 1000, Centro, São Paulo - SP</li>
+              <li><span class="footer-icon phone-icon"></span> (11) 3000-1000</li>
+              <li><span class="footer-icon email-icon"></span> contato@g3net.com.br</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="footer-bottom">
+          <p>&copy; <span id="currentYear"></span> G3NET. Todos os direitos reservados.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+
+    <!-- IMPORTANTE: NÃO REMOVA ESTA TAG DE SCRIPT OU ESTE COMENTÁRIO! -->
+    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+  </body>
+</html>
