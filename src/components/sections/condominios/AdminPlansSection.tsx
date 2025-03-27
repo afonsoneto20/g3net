@@ -5,12 +5,7 @@ import { Button } from "@/components/ui/button";
 import { CheckIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-/**
- * Componente que apresenta os planos para áreas administrativas de condomínios
- * Exibe cards com os planos disponíveis para áreas comuns e administração
- */
 const AdminPlansSection = () => {
-  // Lista de planos disponíveis para áreas comuns e administração
   const plans = [
     {
       title: "Condomínio 600 Mbps",
@@ -42,7 +37,6 @@ const AdminPlansSection = () => {
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Cabeçalho da seção */}
         <div className="text-center mb-16 animate-fade-up">
           <h2 className="text-3xl font-bold mb-4">Planos para Áreas Comuns e Administrativas</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -50,7 +44,6 @@ const AdminPlansSection = () => {
           </p>
         </div>
         
-        {/* Grid de cards de planos */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
           {plans.map((plan, index) => (
             <Card key={index} className={`animate-fade-up border ${index === 1 ? 'border-primary-500 shadow-lg' : 'border-gray-100 shadow'} h-full flex flex-col`}>
@@ -59,7 +52,6 @@ const AdminPlansSection = () => {
                 <div className="mt-1 text-primary-500 font-bold text-3xl">{plan.speed}</div>
               </CardHeader>
               <CardContent className="flex-1 flex flex-col">
-                {/* Informações de preço */}
                 <div className="mb-6">
                   <div className="text-sm text-gray-500">Mensalidade</div>
                   <div className="flex items-end gap-1">
@@ -69,7 +61,6 @@ const AdminPlansSection = () => {
                   </div>
                 </div>
                 
-                {/* Lista de recursos incluídos */}
                 <ul className="mb-8 flex-1">
                   {plan.features.map((feature, i) => (
                     <li key={i} className="flex items-center mb-3">
@@ -81,7 +72,6 @@ const AdminPlansSection = () => {
                   ))}
                 </ul>
                 
-                {/* Informações adicionais e botão de ação */}
                 <div className="mt-auto">
                   <p className="text-sm text-gray-500 mb-4">
                     Pontos adicionais disponíveis por R$ 50,00/mês cada.
@@ -102,7 +92,6 @@ const AdminPlansSection = () => {
           ))}
         </div>
         
-        {/* Seção para orçamentos personalizados */}
         <div className="mt-12 text-center">
           <p className="text-lg text-gray-700 mb-4">
             Deseja um orçamento personalizado ou velocidades maiores?

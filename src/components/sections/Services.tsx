@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -8,12 +7,7 @@ import { Wifi, WifiOff, Zap, CheckIcon, Building, Home } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import PlanCard from '../ui/PlanCard';
 
-/**
- * Componente que exibe os planos de serviço disponíveis
- * Permite ao usuário navegar entre diferentes categorias de planos
- */
 const Services = () => {
-  // Planos para apartamentos
   const apartmentPlans = [
     {
       title: "Ultra 600 Mbps",
@@ -57,7 +51,6 @@ const Services = () => {
     }
   ];
 
-  // Planos para casas
   const housePlans = [
     {
       title: "Ultra 1 Gbps",
@@ -106,7 +99,6 @@ const Services = () => {
   return (
     <section id="services" className="section bg-gray-50">
       <div className="max-w-7xl mx-auto">
-        {/* Cabeçalho da seção */}
         <div className="text-center mb-16 animate-fade-up">
           <div className="highlight-chip mb-4">
             <Zap size={14} className="mr-1" /> Planos para todos os perfis
@@ -117,7 +109,6 @@ const Services = () => {
           </p>
         </div>
         
-        {/* Abas para seleção do tipo de residência */}
         <Tabs defaultValue="apartamento" className="w-full">
           <div className="flex justify-center mb-8">
             <TabsList>
@@ -132,7 +123,6 @@ const Services = () => {
             </TabsList>
           </div>
           
-          {/* Conteúdo da aba de apartamentos */}
           <TabsContent value="apartamento">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {apartmentPlans.map((plan, index) => (
@@ -148,7 +138,6 @@ const Services = () => {
             </div>
           </TabsContent>
           
-          {/* Conteúdo da aba de casas */}
           <TabsContent value="casa">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {housePlans.map((plan, index) => (
