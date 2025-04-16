@@ -40,3 +40,4 @@ const Condominios = () => {
 };
 
 export default Condominios;
+

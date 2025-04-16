@@ -28,6 +28,7 @@ interface PlanCardProps {
 /**
  * Componente de card para exibir planos de internet
  * Usado nas seções de planos do site
+ * @param props - Propriedades do componente
  */
 const PlanCard = ({
   title,
@@ -41,7 +42,9 @@ const PlanCard = ({
   return (
     <div 
       className={cn(
+        // Classes base do card
         "relative rounded-2xl p-6 transition-all duration-300 card-hover bg-white h-full flex flex-col",
+        // Classes condicionais baseadas na propriedade popular
         popular ? "border-2 border-primary-500 shadow-lg" : "border border-gray-100 shadow",
         className
       )}
@@ -97,3 +100,4 @@ const PlanCard = ({
 };
 
 export default PlanCard;
+
