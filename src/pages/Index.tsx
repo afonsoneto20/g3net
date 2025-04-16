@@ -1,4 +1,8 @@
-
+/**
+ * Página inicial do site
+ * Agrupa todos os componentes principais da landing page
+ * Inclui seções de hero, serviços, features, cobertura e contato 
+ */
 import React from 'react';
 import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
@@ -40,4 +44,3 @@ const Index = () => {
 };
 
 export default Index;
-

@@ -1,4 +1,9 @@
 
+/**
+ * Componente de card para exibição de planos
+ * Utilizado para mostrar informações de planos de internet
+ * Inclui título, velocidade, preço, recursos e botão de ação
+ */
 import React from 'react';
 import { Button } from './button';
 import { cn } from '@/lib/utils';

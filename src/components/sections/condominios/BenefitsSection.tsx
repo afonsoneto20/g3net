@@ -1,4 +1,9 @@
 
+/**
+ * Seção de benefícios para condomínios
+ * Lista as vantagens específicas para o segmento
+ * Utiliza cards para apresentar cada benefício
+ */
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { BuildingIcon, Wifi, Users, LayoutGrid, Home, Lightbulb } from 'lucide-react';

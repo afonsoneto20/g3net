@@ -1,3 +1,9 @@
+
+/**
+ * Componente de rodapé
+ * Exibe informações de contato, links úteis e redes sociais
+ * Mantém consistência visual em todas as páginas
+ */
 import React from 'react';
 import { Facebook, Instagram, Twitter, Linkedin, MapPin, Phone, Mail } from 'lucide-react';
 

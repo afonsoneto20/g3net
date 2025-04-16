@@ -1,3 +1,8 @@
+/**
+ * Hook e funções utilitárias para gerenciar toasts
+ * Implementa um sistema de notificações toast com limite de exibição
+ * e remoção automática após tempo determinado
+ */
 import * as React from "react"
 
 import type {

@@ -1,4 +1,9 @@
 
+/**
+ * Página de serviços para condomínios
+ * Apresenta soluções específicas para o segmento de condomínios
+ * Inclui seções de benefícios, como funciona, planos e depoimentos
+ */
 import React from 'react';
 import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';

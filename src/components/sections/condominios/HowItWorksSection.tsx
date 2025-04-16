@@ -1,4 +1,9 @@
 
+/**
+ * Seção explicativa do processo de instalação
+ * Detalha o passo a passo da implementação em condomínios
+ * Apresenta cada etapa de forma visual e organizada
+ */
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { CheckIcon } from 'lucide-react';

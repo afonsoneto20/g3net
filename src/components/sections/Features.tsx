@@ -1,4 +1,9 @@
 
+/**
+ * Seção de recursos do site
+ * Apresenta os principais diferenciais e benefícios dos serviços
+ * Utiliza cards para organizar as informações visualmente
+ */
 import React from 'react';
 import FeatureCard from '../ui/FeatureCard';
 import { Shield, Clock, Zap, Headphones, WifiOff, Award } from 'lucide-react';

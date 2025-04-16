@@ -1,3 +1,9 @@
+
+/**
+ * Hook para detectar se o dispositivo é móvel
+ * Utiliza media query para verificar a largura da tela
+ * @returns boolean - true se for dispositivo móvel
+ */
 import * as React from "react"
 
 const MOBILE_BREAKPOINT = 768

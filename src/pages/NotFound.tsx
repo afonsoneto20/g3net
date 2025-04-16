@@ -1,4 +1,8 @@
-
+/**
+ * Página 404 - Não Encontrado
+ * Exibida quando o usuário tenta acessar uma rota inexistente
+ * Registra tentativas de acesso a rotas inválidas no console
+ */
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 
@@ -31,4 +35,3 @@ const NotFound = () => {
 };
 
 export default NotFound;
-

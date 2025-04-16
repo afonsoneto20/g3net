@@ -1,4 +1,9 @@
 
+/**
+ * Componente de card para exibição de recursos
+ * Utilizado para mostrar características e benefícios dos serviços
+ * Inclui ícone, título e descrição do recurso
+ */
 import React from 'react';
 import { cn } from '@/lib/utils';
 

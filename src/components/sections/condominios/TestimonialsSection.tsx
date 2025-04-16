@@ -1,4 +1,9 @@
 
+/**
+ * Seção de depoimentos de clientes
+ * Exibe feedback real de síndicos e administradores
+ * Aumenta a credibilidade da solução para condomínios
+ */
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 
