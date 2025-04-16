@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Facebook, Instagram, Twitter, Linkedin, MapPin, Phone, Mail } from 'lucide-react';
 
@@ -8,8 +7,15 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
-            <div className="text-2xl font-bold mb-4">G3NET</div>
-            <p className="text-blue-100 mb-6">
+            <div className="flex flex-col">
+              <img 
+                src="/logo.png" 
+                alt="G3NET Fiber Logo" 
+                className="h-12 w-auto mb-2"
+              />
+              <div className="text-lg font-medium text-blue-100">Fiber</div>
+            </div>
+            <p className="text-blue-100 mb-6 mt-4">
               Conectando você ao que realmente importa. Internet rápida, estável e com o melhor suporte.
             </p>
             <div className="flex space-x-4">

@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Button } from '../ui/button';
 import { Menu, X, ChevronDown } from 'lucide-react';
@@ -95,7 +94,13 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20">
           <div className="flex items-center">
-            <Link to="/" className="text-2xl font-bold text-primary-600">G3NET</Link>
+            <Link to="/" className="flex items-center">
+              <img 
+                src="/logo.png" 
+                alt="G3NET Fiber Logo" 
+                className="h-10 w-auto"
+              />
+            </Link>
           </div>
           
           <div className="hidden md:flex items-center space-x-8">
